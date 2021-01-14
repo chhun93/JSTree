@@ -1,0 +1,9 @@
+.tree > div{
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.tree > div:hover{
+    cursor:pointer;
+    background-color: gray;
+}

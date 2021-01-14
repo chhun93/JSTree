@@ -6,24 +6,25 @@
     <script src="Update.js"></script>
     <script src="Delete.js"></script>
     <script src="ShowList.js"></script>
-    <script src="Body.js"></script>
+    <script src="Pick.js"></script>
+    <link rel="stylesheet" href="Tree.css">
     <title>JS TREE</title>
 </head>
 
 <body>
     <div id="_title">JS TREE</div>
-    <div class="menu">
+    <span class="menu">
         <div id="_create" onclick="ClickCreateText(_click_create)">CREATE</div>
         <div id="_update">UPDATE</div>
         <div id="_delete">DELETE</div>
-        <div id="_click_create" style="visibility : hidden">
-            <input type="text" id="_click_create_title" placeholder="title">
-            <input type="text" id="_click_create_content" placeholder="content">
-            <input type="button" id="_click_create_confirm" value="OK"
-                onclick="add_div(_click_create_title.value,_click_create_content.value)">
-        </div>
+    </span>
+    <div id="_click_create" style="visibility : visible">
+        <input type="text" id="_click_create_title" placeholder="title">
+        <input type="text" id="_click_create_content" placeholder="content">
+        <input type="button" id="_click_create_confirm" value="OK"
+            onclick="add_div(_click_create_title.value,_click_create_content.value)">
     </div>
-    <div class="tree">
+    <div class="tree" onclick="">
 
     </div>
 </body>

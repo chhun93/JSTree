@@ -1,4 +1,5 @@
 var createCount = 0;
+
 add_div = (title, content) => {
   if (title === "" || content === "") return;
 
@@ -14,7 +15,12 @@ add_div = (title, content) => {
   div.id = `treeContent${createCount}`;
   div.appendChild(divTitle);
   div.appendChild(divContent);
+  div.onclick = () => pick(div);
 
-  document.querySelector(".tree").appendChild(div);
+  if (pickComponent === "") {
+    document.querySelector(".tree").appendChild(div);
+  } else {
+    document.querySelector(`#${pickComponent.id}`).appendChild(div);
+  }
   createCount++;
 };
