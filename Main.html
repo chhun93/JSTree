@@ -14,15 +14,14 @@
 <body>
     <div id="_title">JS TREE</div>
     <span class="menu">
-        <div id="_create" onclick="ClickCreateText(_click_create)">CREATE</div>
-        <div id="_update">UPDATE</div>
+        <div id="_create" onclick="ClickCreateText(_input_div)">CREATE</div>
+        <div id="_update" onclick="ClickUpdateText(_input_div)">UPDATE</div>
         <div id="_delete">DELETE</div>
     </span>
-    <div id="_click_create" style="visibility : visible">
-        <input type="text" id="_click_create_title" placeholder="title">
-        <input type="text" id="_click_create_content" placeholder="content">
-        <input type="button" id="_click_create_confirm" value="OK"
-            onclick="add_div(_click_create_title.value,_click_create_content.value)">
+    <div id="_input_div" style="visibility :collapse">
+        <input type="text" id="_input_title" placeholder="title">
+        <input type="text" id="_input_content" placeholder="content">
+        <input type="button" id="_input_confirm" value="OK" onclick="click_ok(_input_title.value,_input_content.value)">
     </div>
     <div class="tree" onclick="">
 

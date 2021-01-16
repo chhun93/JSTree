@@ -1,6 +1,18 @@
 var createCount = 0;
 
-add_div = (title, content) => {
+click_ok = (title, content) => {
+  const what = document.getElementById("_input_confirm").value;
+  if (what === "CREATE") {
+    create_div(title, content);
+  } else if (what === "UPDATE") {
+    update_div(title, content);
+  } else if (what === "DELETE") {
+  }
+  document.getElementById("_input_title").value = "";
+  document.getElementById("_input_content").value = "";
+};
+
+create_div = (title, content) => {
   if (title === "" || content === "") return;
 
   var div = document.createElement("div");
@@ -23,4 +35,8 @@ add_div = (title, content) => {
     document.querySelector(`#${pickComponent.id}`).appendChild(div);
   }
   createCount++;
+};
+
+update_div = (title, content) => {
+  if (title === "" || content === "") return;
 };

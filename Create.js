@@ -1,7 +1,13 @@
-const ClickCreateText = (createDiv) => {
-  if (createDiv.style.visibility === "visible") {
-    createDiv.style.visibility = "hidden";
+const ClickCreateText = (inputDiv) => {
+  if (pickComponent != "") {
+    document.getElementById(pickComponent.id).style.backgroundColor = "white";
+    document.getElementById(pickComponent.id).removeAttribute("style");
+    pickComponent = "";
+  }
+  if (inputDiv.style.visibility === "visible") {
+    inputDiv.style.visibility = "collapse";
   } else {
-    createDiv.style.visibility = "visible";
+    document.getElementById("_input_confirm").value = "CREATE";
+    inputDiv.style.visibility = "visible";
   }
 };
