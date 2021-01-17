@@ -6,8 +6,7 @@ click_ok = (title, content) => {
     create_div(title, content);
   } else if (what === "UPDATE") {
     update_div(title, content);
-  } else if (what === "DELETE") {
-  }
+  } 
   document.getElementById("_input_title").value = "";
   document.getElementById("_input_content").value = "";
   document.getElementById("_input_div").style.visibility = "collapse";
@@ -40,4 +39,12 @@ create_div = (title, content) => {
 
 update_div = (title, content) => {
   if (title === "" || content === "") return;
+
+  pickComponent.firstElementChild.textContent = title;
+  pickComponent.lastElementChild.textContent = content;
 };
+
+delete_div = () =>{
+  document.querySelector(".tree").removeChild(pickComponent);
+  pickComponent="";
+}

@@ -1,6 +1,21 @@
 .tree > div{
+    width: 200px;
+    height: 100px;
     background-color: white;
     border: 1px solid gray;
+}
+
+.tree h2{
+    margin : 0;
+    white-space:nowrap; 
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.tree p{
+    margin : 0;
+    white-space:nowrap; 
+    overflow:hidden;
+    text-overflow: ellipsis;
 }
 
 .tree > div:hover{

@@ -5,7 +5,7 @@
     <script src="Create.js"></script>
     <script src="Update.js"></script>
     <script src="Delete.js"></script>
-    <script src="ShowList.js"></script>
+    <script src="Tree.js"></script>
     <script src="Pick.js"></script>
     <link rel="stylesheet" href="Tree.css">
     <link rel="stylesheet" href="Menu.css">
@@ -17,7 +17,7 @@
     <div class="menu">
         <div id="_create" onclick="ClickCreateText(_input_div)">CREATE</div>
         <div id="_update" onclick="ClickUpdateText(_input_div)">UPDATE</div>
-        <div id="_delete">DELETE</div>
+        <div id="_delete" onclick="delete_div()">DELETE</div>
     </div>
     <div id="_input_div" style="visibility :collapse">
         <input type="text" id="_input_title" placeholder="title">
