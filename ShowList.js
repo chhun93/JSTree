@@ -10,6 +10,7 @@ click_ok = (title, content) => {
   }
   document.getElementById("_input_title").value = "";
   document.getElementById("_input_content").value = "";
+  document.getElementById("_input_div").style.visibility = "collapse";
 };
 
 create_div = (title, content) => {

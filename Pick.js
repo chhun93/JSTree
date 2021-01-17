@@ -7,10 +7,7 @@ pick = (self) => {
   }
   pickComponent = self;
   document.getElementById(pickComponent.id).style.backgroundColor = "gray";
-  if (
-    document.getElementById("_input_div").style.visibility === "visible" &&
-    document.getElementById("_input_confirm").value != "CREATE"
-  ) {
+  if (document.getElementById("_input_div").style.visibility === "visible") {
     document.getElementById("_input_title").value =
       pickComponent.firstElementChild.textContent;
     document.getElementById("_input_content").value =
