@@ -1,6 +1,28 @@
 var pickComponent = "";
 
-pick = (self) => {
+var body = document.querySelector("body");
+body.addEventListener("click", clickBody);
+
+function clickBody(event) {
+  var target = event.target;
+  
+  if (target.className != "tree") {
+    if(target.parentNode.className==="tree"){
+      var targetParent = target.parentNode
+      pickTreeComponent(targetParent);
+      return;
+    }
+    if (pickComponent != "") {
+      document.getElementById(pickComponent.id).style.backgroundColor = "white";
+      document.getElementById(pickComponent.id).removeAttribute("style");
+      pickComponent = "";
+    }
+  } else {
+    pickTreeComponent(target);
+  }
+}
+
+pickTreeComponent = (self) => {
   if (pickComponent != "" && pickComponent != self) {
     document.getElementById(pickComponent.id).style.backgroundColor = "white";
     document.getElementById(pickComponent.id).removeAttribute("style");

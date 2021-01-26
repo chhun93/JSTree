@@ -6,7 +6,7 @@ click_ok = (title, content) => {
     create_div(title, content);
   } else if (what === "UPDATE") {
     update_div(title, content);
-  } 
+  }
   document.getElementById("_input_title").value = "";
   document.getElementById("_input_content").value = "";
   document.getElementById("_input_div").style.visibility = "collapse";
@@ -20,17 +20,17 @@ create_div = (title, content) => {
   var divContent = document.createElement("p");
   var divTitleValue = document.createTextNode(`${title}`);
   var divContentValue = document.createTextNode(`${content}`);
-
+  
   divTitle.appendChild(divTitleValue);
   divContent.appendChild(divContentValue);
 
   div.id = `treeContent${createCount}`;
+  div.className = "tree";
   div.appendChild(divTitle);
   div.appendChild(divContent);
-  div.onclick = () => pick(div);
 
   if (pickComponent === "") {
-    document.querySelector(".tree").appendChild(div);
+    document.querySelector("body").appendChild(div);
   } else {
     document.querySelector(`#${pickComponent.id}`).appendChild(div);
   }
@@ -44,7 +44,7 @@ update_div = (title, content) => {
   pickComponent.lastElementChild.textContent = content;
 };
 
-delete_div = () =>{
-  document.querySelector(".tree").removeChild(pickComponent);
-  pickComponent="";
-}
+delete_div = () => {
+  document.querySelector("body").removeChild(pickComponent);
+  pickComponent = "";
+};
